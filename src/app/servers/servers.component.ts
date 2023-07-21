@@ -10,11 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
-   isServer: boolean = true;
+   isServer: boolean = false;
    inputData: string = ''
    constructor() {
      setTimeout(() => {
-      this.isServer = false;
+      this.isServer = true;
      }, 2000)
    }
 

@@ -7,5 +7,5 @@
     [(ngModel)]="userName"
     >
     <p id="displayUserName">{{userName}}</p>
-    <button id="submitBtn" class="btn btn-success" (click)="submituserData()">submit</button>
+    <button id="submitBtn" class="btn btn-success" (click)="submituserData()" [disabled]="userName == ''">submit</button>
 </div>

@@ -5,5 +5,7 @@ id="severData"
 [(ngModel)]="inputData"
 />
 <p>{{inputData}} </p>
-<button class="btn btn-primary" [disabled]="isServer" (click)="handleApply()"> apply</button>
+<button class="btn btn-primary" [disabled]="!isServer" (click)="handleApply()"> server </button>
+<p *ngIf="isServer">server is created</p>
+<p>server not created</p>
 <app-server></app-server>
