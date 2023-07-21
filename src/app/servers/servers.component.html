@@ -6,6 +6,8 @@ id="severData"
 />
 <p>{{inputData}} </p>
 <button class="btn btn-primary" [disabled]="!isServer" (click)="handleApply()"> server </button>
-<p *ngIf="isServer">server is created</p>
-<p>server not created</p>
+<p *ngIf="isServer; else noServer">server is created</p>
+<ng-template #noServer>
+    <p>no server created</p>
+</ng-template>
 <app-server></app-server>
