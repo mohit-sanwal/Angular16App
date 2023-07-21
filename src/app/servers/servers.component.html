@@ -6,7 +6,7 @@ id="severData"
 />
 <p>{{inputData}} </p>
 <button class="btn btn-primary" [disabled]="!isServer" (click)="handleApply()"> server </button>
-<p *ngIf="isServer; else noServer" [ngStyle]="{backgroundColor: 'green' }">server is created</p>
+<p *ngIf="isServer; else noServer" [ngStyle]="{backgroundColor: 'green' }" [ngClass]="{dcolor: isServer}">server is created</p>
 <ng-template #noServer>
     <p [ngStyle]="{backgroundColor: 'red' }">no server created</p>
 </ng-template>
