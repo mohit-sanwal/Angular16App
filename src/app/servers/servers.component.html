@@ -1,4 +1,9 @@
 <p>servers works!</p>
+<input 
+type="text" 
+id="severData"
+[(ngModel)]="inputData"
+/>
+<p>{{inputData}} </p>
 <button class="btn btn-primary" [disabled]="isServer" (click)="handleApply()"> apply</button>
-<app-server></app-server>
 <app-server></app-server>

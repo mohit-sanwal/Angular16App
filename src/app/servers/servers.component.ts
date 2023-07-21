@@ -10,18 +10,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
-   isServer: boolean = true
+   isServer: boolean = true;
+   inputData: string = ''
    constructor() {
      setTimeout(() => {
       this.isServer = false;
      }, 2000)
    }
-   
+
     ngInit() {
 
     }
 
     handleApply() {
-      console.log('applied..')
+      console.log('applied..', this.inputData)
     }
+
+    // handleInputData(event: any) {
+    //   console.log('event', event.target.value);
+    //   this.inputData = event.target.value
+    // }
 }

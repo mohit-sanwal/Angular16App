@@ -1,5 +1,11 @@
 
 <div id="serverComp">
     <p>this is {{serverId}} the server {{serverStatus}} component {{getServerStatus()}}</p>
-
+    <input 
+    type="text" 
+    id="username"
+    [(ngModel)]="userName"
+    >
+    <p id="displayUserName">{{userName}}</p>
+    <button id="submitBtn" class="btn btn-success" (click)="submituserData()">submit</button>
 </div>
