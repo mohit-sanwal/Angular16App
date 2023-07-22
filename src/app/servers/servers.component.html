@@ -14,5 +14,5 @@ id="severData"
 
 <button class="btn btn-primary" (click)="handleDisplay()">display details</button>
 <p *ngIf="isDisplay">Secret Password = tuna</p>
-<p *ngFor="let dateTime of arrayOfDateTime.entries()" [ngClass]="{dateTimebgColor: dateTime[0] >= 4}"> {{dateTime[1]}} </p>
+<p *ngFor="let dateTime of arrayOfDateTime; let i= index" [ngClass]="{dateTimebgColor: i >= 4}"> {{dateTime}} </p>
 <app-server></app-server>
