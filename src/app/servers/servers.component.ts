@@ -14,6 +14,8 @@ export class ServersComponent {
    inputData: string = ''
    serverStatus: string = 'offline';
    items= ['server1', 'server2', 'server3', 'server4'];
+   isDisplay = false;
+   arrayOfDateTime: any = [];
    constructor() {
      setTimeout(() => {
       this.isServer = true;
@@ -27,6 +29,12 @@ export class ServersComponent {
 
     handleApply() {
       console.log('applied..', this.inputData)
+    }
+
+    handleDisplay() {
+      this.isDisplay = !this.isDisplay
+      const dateTime = new Date()
+      this.arrayOfDateTime.push(dateTime);
     }
 
     // handleInputData(event: any) {

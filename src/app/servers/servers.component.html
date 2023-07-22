@@ -11,4 +11,8 @@ id="severData"
     <p [ngStyle]="{backgroundColor: 'red' }">no server created</p>
 </ng-template>
 <p *ngFor="let i of items">{{i}}</p>
+
+<button class="btn btn-primary" (click)="handleDisplay()">display details</button>
+<p *ngIf="isDisplay">Secret Password = tuna</p>
+<p *ngFor="let dateTime of arrayOfDateTime.entries()" [ngClass]="{dateTimebgColor: dateTime[0] >= 4}"> {{dateTime[1]}} </p>
 <app-server></app-server>
