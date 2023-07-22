@@ -12,9 +12,12 @@ import { Component } from '@angular/core';
 export class ServersComponent {
    isServer: boolean = false;
    inputData: string = ''
+   serverStatus: string = 'offline';
+   items= ['server1', 'server2', 'server3', 'server4'];
    constructor() {
      setTimeout(() => {
       this.isServer = true;
+      this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline'
      }, 2000)
    }
 
