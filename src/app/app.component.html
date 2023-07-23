@@ -7,9 +7,12 @@
     <hr>
     <div class="row">
       <div class="col-xs-12">
+        <button (click)="onChangeElement()" class="btn btn-primary"> change First button </button>
+        <button (click)="onDeleteElement()" class="btn btn-danger"> delete First button </button>
       <app-server-element
        *ngFor="let serverElement of serverElements"
         [srvElement] = "serverElement"
+        [name]="serverElement.name"
       >
 
       <p>
