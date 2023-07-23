@@ -8,7 +8,7 @@ import {ServerElements} from './app.model';
 })
 export class AppComponent implements OnInit
  {
-  serverElements: ServerElements[] = [];
+  serverElements: ServerElements[] = [new ServerElements('test server', 'this is a server', 'server')];
 
   // constructor() {
   //   console.log('constructor called..')
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit
   // }
   
   ngOnInit(): void {
-    console.log('ngOnInit called')
+    // console.log('ngOnInit called')
   }
 
   // ngDoCheck() {

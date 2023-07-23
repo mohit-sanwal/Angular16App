@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, 
-  AfterViewChecked, OnDestroy, SimpleChanges, Input, ViewEncapsulation} from '@angular/core';
+  AfterViewChecked, OnDestroy, SimpleChanges, Input, ViewEncapsulation, ViewChild, ElementRef, ContentChild, } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -18,6 +18,9 @@ OnDestroy {
   @Input('srvElement') element: {name: string, content: string, type: string};
   @Input() name: string;
 
+  @ViewChild('heading', {static: true}) heading: ElementRef;
+  @ContentChild('contentParagraph') contentPara: ElementRef;
+
    constructor() {
     this.element = {name:'', content: '', type: ''}
     console.log('constructor called..')
@@ -26,35 +29,35 @@ OnDestroy {
 
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges called', changes)
+    console.log('ngOnChanges called', changes, this.heading.nativeElement.textContent)
   }
   
   ngOnInit(){
-    console.log('ngOnInit called')
+    console.log('ngOnInit called', this.heading?.nativeElement?.value)
   }
 
   ngDoCheck() {
-    console.log('ngDoCheck called')
+    console.log('ngDoCheck called', this.heading.nativeElement.textContent)
   }
 
   ngAfterContentInit() {
-    console.log('ngAfterContentInit called')
+    console.log('ngAfterContentInit called',   this.heading.nativeElement.textContent, this.contentPara.nativeElement.textContent)
   }
 
   ngAfterContentChecked() {
-    console.log('ngAfterContentChecked called')
+    console.log('ngAfterContentChecked called',  this.heading.nativeElement.textContent, this.contentPara.nativeElement.textContent)
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit called')
+    console.log('ngAfterViewInit called',   this.heading.nativeElement.textContent)
   }
 
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked called')
+    console.log('ngAfterViewChecked called', this.heading.nativeElement.textContent, this.contentPara.nativeElement.textContent)
   }
 
   ngOnDestroy() {
-    console.log('ngOnDistroy called')
+    console.log('ngOnDistroy called', this.heading.nativeElement.textContent)
   }
 
 }
