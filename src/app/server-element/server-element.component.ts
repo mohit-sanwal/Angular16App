@@ -26,7 +26,7 @@ OnDestroy {
     console.log('constructor called..')
    }
 
-
+ // contentChild will accessible after ngAfterContentInit, ViewChild Ref will be accessed after ngAfterViewInit
 
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called', changes, this.heading.nativeElement.textContent)
