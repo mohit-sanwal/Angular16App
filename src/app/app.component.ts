@@ -10,4 +10,12 @@ export class AppComponent {
 
   constructor() {
   }
+
+  onServerCreated(serverData: {name: string, content: string, type: string}) {
+    this.serverElements.push(serverData);
+  }
+
+  onBluePrintCreated(bluePrintData: {name: string, content: string, type: string}) {
+    this.serverElements.push(bluePrintData);
+  }
 }
