@@ -12,7 +12,9 @@ export class CockpitComponent implements OnInit{
   newServerName = ''
   newServerContent =''
   serverElements = [];
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement , contentInput: HTMLInputElement) {
+    this.newServerName = nameInput.value;
+    this.newServerContent = contentInput.value;
     if(this.newServerName && this.newServerContent) {
     this.serverCreated.emit({name: this.newServerName, content: this.newServerContent, type: 'server'});
     this.newServerName = ''
@@ -27,7 +29,9 @@ export class CockpitComponent implements OnInit{
     }
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(nameInput: HTMLInputElement, contentInput: HTMLInputElement) {
+    this.newServerName = nameInput.value;
+    this.newServerContent = contentInput.value;
     if(this.newServerName && this.newServerContent) {
       this.bluePrintCreated.emit({name: this.newServerName, content: this.newServerContent, type: 'blueprint'})
       // this.serverElements.push({
