@@ -18,8 +18,14 @@
           <!-- <p>Only odd</p> -->
       <p appBasicHighlight *appUnless="display">this is a bsic attribute directive</p>
       <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">this is a bsic attribute directive better heightlinght</p>
-      
         </ng-template>
+        <div [ngSwitch]="dataValue">
+          <p *ngSwitchCase="5">5</p>
+          <p *ngSwitchCase="10">10</p>
+          <p *ngSwitchCase="100">100</p>
+          <p *ngSwitchCase="1000">1000</p>
+          <p *ngSwitchDefault>6</p>
+        </div>
       </div>
     </div>
   </div>

@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class TestDirectivesComponent {
   numbers = [1,2,3,4,5]
   onlyOdd: boolean = true;
-  display = true
+  display = true;
+  dataValue = 123;
     constructor() {
 
     }
