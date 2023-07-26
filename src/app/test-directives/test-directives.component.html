@@ -16,7 +16,7 @@
         </ul>
         <ng-template [ngIf]="onlyOdd">
           <!-- <p>Only odd</p> -->
-      <p appBasicHighlight>this is a bsic attribute directive</p>
+      <p appBasicHighlight *appUnless="display">this is a bsic attribute directive</p>
       <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">this is a bsic attribute directive better heightlinght</p>
       
         </ng-template>

@@ -10,8 +10,9 @@ import {SuccessComponent} from './success/success.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { TestDirectivesComponent } from './test-directives/test-directives.component';
-import {appBasicHighlightDirective} from './basic-highlight/basic-highlight.directive';
-import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import {appBasicHighlightDirective} from './custom-atrribut-directive/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './custom-atrribut-directive/better-highlight/better-highlight.directive';
+import {UnlessDirective} from './custom-structural-directive/unless/unless.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { BetterHighlightDirective } from './better-highlight/better-highlight.di
     TestDirectivesComponent,
     appBasicHighlightDirective,
     BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
