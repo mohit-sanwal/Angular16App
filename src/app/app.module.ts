@@ -10,7 +10,7 @@ import {SuccessComponent} from './success/success.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { TestDirectivesComponent } from './test-directives/test-directives.component';
-
+import {appBasicHighlightDirective} from './basic-highlight/basic-highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import { TestDirectivesComponent } from './test-directives/test-directives.compo
     CockpitComponent,
     ServerElementComponent,
     TestDirectivesComponent,
+    appBasicHighlightDirective
   ],
   imports: [
     BrowserModule,
