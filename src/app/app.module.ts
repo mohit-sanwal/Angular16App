@@ -9,6 +9,7 @@ import {ErrorComponent} from './error/error.component';
 import {SuccessComponent} from './success/success.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { TestDirectivesComponent } from './test-directives/test-directives.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ErrorComponent,
     CockpitComponent,
     ServerElementComponent,
+    TestDirectivesComponent,
   ],
   imports: [
     BrowserModule,
