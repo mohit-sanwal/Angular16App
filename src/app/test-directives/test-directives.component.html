@@ -8,8 +8,10 @@
         <br><br>
         <ul class="list-group">
           <li
-            class="list-group-item" *ngFor="let num of numbers; let i= index">
-            <span *ngIf="num % 2 !== 0">{{num}} </span>
+            class="list-group-item" 
+            *ngFor="let num of numbers; let i= index"
+            >
+            <span *ngIf="num % 2 !== 0" [ngClass]="{odd: num % 2 !== 0}" [ngStyle]="{backgroundColor: num % 2 !== 0 ? 'blue' : 'red'}">{{num}} </span>
           </li>
         </ul>
         <ng-template [ngIf]="onlyOdd">
