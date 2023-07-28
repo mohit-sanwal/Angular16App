@@ -8,6 +8,21 @@ import {ServerElements} from './app.model';
 })
 export class AppComponent implements OnInit
  {
+  accounts = [
+    {
+      name: 'Master Account',
+      status: 'active'
+    },
+    {
+      name: 'Testaccount',
+      status: 'inactive'
+    },
+    {
+      name: 'Hidden Account',
+      status: 'unknown'
+    }
+  ];
+  
   serverElements: ServerElements[] = [new ServerElements('test server', 'this is a server', 'server')];
 
   // constructor() {
@@ -66,5 +81,13 @@ export class AppComponent implements OnInit
 
   onBluePrintCreated(bluePrintData: {name: string, content: string, type: string}) {
     this.serverElements.push(bluePrintData);
+  }
+
+  onAccountAdded(newAccount: {name: string, status: string}) {
+    this.accounts.push(newAccount);
+  }
+
+  onStatusChanged(updateInfo: {id: number, newStatus: string}) {
+    this.accounts[updateInfo.id].status = updateInfo.newStatus;
   }
 }

@@ -13,6 +13,8 @@ import { TestDirectivesComponent } from './test-directives/test-directives.compo
 import {appBasicHighlightDirective} from './custom-atrribut-directive/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './custom-atrribut-directive/better-highlight/better-highlight.directive';
 import {UnlessDirective} from './custom-structural-directive/unless/unless.directive';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import {UnlessDirective} from './custom-structural-directive/unless/unless.direc
     TestDirectivesComponent,
     appBasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
