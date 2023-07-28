@@ -1,33 +1,23 @@
 import { 
   Component, OnInit} from '@angular/core';
 import {ServerElements} from './app.model';
+import { AccountService } from './account.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AccountService]
 })
 export class AppComponent implements OnInit
  {
-  accounts = [
-    {
-      name: 'Master Account',
-      status: 'active'
-    },
-    {
-      name: 'Testaccount',
-      status: 'inactive'
-    },
-    {
-      name: 'Hidden Account',
-      status: 'unknown'
-    }
-  ];
-  
+  accounts: {name: string, status: string}[] = [];
   serverElements: ServerElements[] = [new ServerElements('test server', 'this is a server', 'server')];
+    
+  constructor(private accountService: AccountService) {
+    console.log('constructor called..')
+  }
 
-  // constructor() {
-  //   console.log('constructor called..')
-  // }
+  
 
   // onChangeElement() {
   //   this.serverElements[0].name = "changed.."
@@ -38,7 +28,8 @@ export class AppComponent implements OnInit
   // }
   
   ngOnInit(): void {
-    // console.log('ngOnInit called')
+    console.log('ngOnInit called')
+    this.accounts = this.accountService.accounts;
   }
 
   // ngDoCheck() {
